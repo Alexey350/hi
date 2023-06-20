@@ -1,19 +1,16 @@
+value = str(input('Введите Вашу строку: '))
+to_right = str(value)
+to_left_list = []
+to_left = ''
 
+for elem in value:
+    to_left_list.append(elem)
+to_left_list.reverse()
 
-# def strcounter(s):
-#     for sym in set(s):
-#         count = 0
-#         for sub_sym in s:
-#             if sym == sub_sym:
-#                 count += 1
-#         print(f'{sym} - {count}')
+for elem in to_left_list:
+    to_left = to_left + elem
 
-def strcounter(s):
-    sym_dict = {}
-    for sym in s:
-        sym_dict[sym] = 1 + sym_dict.get(sym, 0)
-    
-    for sym, count in sym_dict.items():
-        print(f'{sym} - {count}')
-
-strcounter('asdfg')
+if to_left == to_right:
+    print(True)
+else:
+    print(False)
