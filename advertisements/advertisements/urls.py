@@ -14,12 +14,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
 from django.contrib import admin
 from django.urls import path, include
 
-# Извините, я уже разобрался, как сделать сделать адрес  http://127.0.0.1/lesson_4. Т.к. вы еще не проверили задание, я изменил.
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('lesson_4', include('app_lesson_4.urls')),
+    path('', include('app_lesson_4.urls')),
 ]
