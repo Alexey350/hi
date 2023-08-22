@@ -36,8 +36,9 @@ class Advertisement(models.Model):
     
     @admin.display(description='фотография')
     def image_at(self):
+        if self.image:
             return format_html(
-                '<img src=»{}» width="100" height="111">', self.image
+                '<img src="{url}" style="max-width: 80px; max-height: 80px;">', url=self.image.url
             )
 
 
