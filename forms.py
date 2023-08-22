@@ -4,4 +4,4 @@ from .models import *
 class AdvertisementForm(forms.ModelForm):
     class Meta:
         model = Advertisement
-        fields = '__all__'
+        fields = ['title', 'description', 'price', 'auction', 'image']
